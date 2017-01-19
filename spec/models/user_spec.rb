@@ -48,6 +48,10 @@
           emails.each do |email|
             it { is_expected.to allow_value(email).for(:email) }
           end
+
+          describe 'Relations' do
+            it { is_expected.to have_many :performance_data }
+          end
         end
       end
     end
